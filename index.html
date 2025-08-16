@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gotas de Sabedoria - Home</title>
+
+		<link rel="stylesheet" href="/assets/styles/base.css" />
+		<link rel="stylesheet" href="/assets/styles/home.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+			integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<main id="home-page" class="home-page">
+			<h1 class="main-title">Encontre sua Próxima Inspiração</h1>
+
+			<nav class="buttons">
+				<button id="random-quote-btn" class="button">Citação Aleatória</button>
+
+				<a href="/assets/pages/galeria.html" class="link-button">Ou explore a galeria completa</a>
+			</nav>
+		</main>
+
+		<div id="modal" class="modal hidden">
+			<dialog class="modal-content">
+				<button id="close-modal" class="close-button">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+
+				<section id="modal-content-card">
+					<!-- Construído Dinamicamente -->
+				</section>
+			</dialog>
+
+			<nav class="buttons">
+				<button id="gerar-outra-btn" class="button">Outra Citação</button>
+
+				<a href="/assets/pages/galeria.html" class="link-button">Ou explore a galeria completa</a>
+			</nav>
+		</div>
+
+		<script type="module" src="/assets/js/script-home.js"></script>
+	</body>
+</html>

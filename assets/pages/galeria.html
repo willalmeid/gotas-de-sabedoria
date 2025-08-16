@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gotas de Sabedoria - Gallery</title>
+
+		<link rel="stylesheet" href="/assets/styles/base.css" />
+		<link rel="stylesheet" href="/assets/styles/galeria.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+			integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header-content">
+					<a href="/index.html" class="back-button">
+						<i class="fa-solid fa-arrow-left"></i>
+						Voltar para o início
+					</a>
+
+					<h1 class="section-title">Galeria de Citações</h1>
+				</div>
+
+				<div class="filter-controls-container">
+					<nav id="filter-nav" class="filter-nav">
+						<!-- Construído Dinamicamente -->
+					</nav>
+
+					<form class="filter-search-container">
+						<label class="search-label" for="search-input">
+							<input type="search" id="search-input" placeholder="Pesquisar por palavra..." class="search-input" />
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</label>
+					</form>
+				</div>
+			</div>
+		</header>
+
+		<main class="container">
+			<div id="quotes-grid" class="quotes-grid">
+				<!-- Construído Dinamicamente -->
+			</div>
+		</main>
+
+		<script type="module" src="/assets/js/script-galeria.js"></script>
+	</body>
+</html>

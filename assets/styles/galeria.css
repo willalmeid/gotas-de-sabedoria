@@ -1,0 +1,289 @@
+/* Estilos da Galeria de Citações */
+body {
+	min-height: 100vh;
+}
+
+main {
+	padding: 1rem;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+
+	width: 100%;
+	padding: 0 1rem;
+	background-color: white;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	z-index: 10;
+}
+
+.header .container {
+	width: 100%;
+	max-width: 1280px;
+	padding: 1rem 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.header-content {
+	margin-bottom: 1rem;
+	position: relative;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.section-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--stone-700);
+}
+
+.back-button {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+
+	text-decoration: none;
+	font-weight: 600;
+	color: var(--amber-500);
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: color 0.2s;
+}
+
+.back-button:hover {
+	color: var(--amber-600);
+}
+
+.filter-controls-container {
+	width: 100%;
+	padding: 0 30px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.filter-search-container label {
+	width: 260px;
+	margin: auto;
+	padding: 2px;
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--stone-300);
+	border-radius: 9999px;
+	outline: none;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.search-input {
+	width: 250px;
+	border: none;
+	transition: all 0.2s;
+}
+
+.search-input:focus {
+	outline: none;
+}
+
+.filter-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 0.5rem;
+}
+
+.filter-btn {
+	padding: 0.25rem 0.75rem;
+	font-size: 0.875rem;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: background-color 0.2s, color 0.2s;
+	color: var(--stone-700);
+	background-color: var(--stone-200);
+}
+
+.filter-btn:hover {
+	color: white;
+	background-color: var(--slate-600);
+}
+
+.filter-btn.active {
+	color: white;
+	background-color: var(--slate-700);
+}
+
+.filter-btn.active:hover {
+	color: white;
+	background-color: var(--slate-700);
+}
+
+.quotes-grid {
+	padding: 1rem;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	align-items: start; /* Esta propriedade é a chave */
+}
+
+.quote-card {
+	height: fit-content;
+	padding: 1.5rem;
+	background-color: white;
+	border-radius: 0.5rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+	opacity: 0;
+	transform: translateY(20px);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.quote-card.card-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.quote-card blockquote {
+	padding-bottom: 15px;
+}
+
+.theme-tags {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.theme-tag {
+	font-size: 0.75rem;
+	background-color: var(--stone-200);
+	color: var(--stone-600);
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+}
+
+/* ======================== */
+/* 5. Responsividade */
+/* ======================== */
+
+@media (max-width: 1024px) {
+	.filter-controls-container {
+		padding: 0 10px;
+		justify-content: space-between;
+	}
+
+	.quotes-grid {
+		padding: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.filter-nav {
+		max-width: 60%;
+		/* Adicionando a rolagem horizontal aqui */
+		justify-content: flex-start; /* Alinha os itens à esquerda */
+		flex-wrap: nowrap; /* Impede a quebra de linha */
+		overflow-x: auto; /* Adiciona a barra de rolagem horizontal */
+		padding-bottom: 5px; /* Adiciona um padding para a barra de rolagem não ficar colada */
+	}
+
+	.quote-card {
+		padding: 1.25rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.section-title {
+		font-size: 1.25rem;
+	}
+
+	.filter-controls-container {
+		flex-direction: column-reverse;
+		gap: 15px;
+	}
+
+	.filter-search-container label {
+		width: 100%;
+	}
+
+	.search-input {
+		width: 100%;
+	}
+
+	.quotes-grid {
+		margin: 0 auto;
+		padding: 0.5rem;
+		gap: 0.8rem;
+	}
+
+	.filter-nav {
+		max-width: 100%;
+	}
+
+	.quote-card {
+		padding: 1rem;
+	}
+
+	.filter-btn {
+		font-size: 0.8rem;
+		padding: 0.2rem 0.6rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.header {
+		position: static;
+	}
+
+	.header-content {
+		padding: 2rem 0 0;
+	}
+
+	.back-button {
+		top: 15px;
+	}
+
+	.filter-controls-container {
+		padding: 0;
+		flex-direction: column-reverse;
+		gap: 15px;
+		align-items: center;
+	}
+
+	.filter-search-container label {
+		width: 100%;
+	}
+
+	.search-input {
+		width: 100%;
+	}
+
+	.filter-nav {
+		max-width: 90%;
+	}
+
+	.quotes-grid {
+		width: 100%;
+		padding: 0.5rem;
+		gap: 1rem;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
